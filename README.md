@@ -1,71 +1,34 @@
-## 👋 Hi, I'm Keats (Bo-Wen Deng)
-### 🎓 Software Engineering Undergraduate @ South China University of Technology
-### 🤖 AI Researcher | Digital Human | Robotics | Embodied Intelligence
+# Deng Bowen · 3D Research Resume
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&duration=3500&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&height=45&lines=Passionate+about+AI+%26+Robotics;Building+Intelligent+Systems+That+Interact+with+the+World;Open+to+Internship+%26+Research+Collaboration)](https://git.io/typing-svg)
+这是一个基于 React、TypeScript、Three.js 和 React Three Fiber 的 3D 个人简历网站。
 
----
+页面内容围绕数字人动作生成、具身智能、机器人控制和大模型优化展开：
 
-## 🎓 Education
-- **South China University of Technology (SCUT)** | Software Engineering | 2023 - 2028 (Expected)
-- **Technical University of Munich (TUM)** | HPC & Embodied Intelligence | Summer Exchange 2025
+- 首屏：Deng Bowen / 邓博文
+- 教育经历：SCUT、TUM、Westlake University · Endless Lab
+- 研究项目：Streaming Co-Dance、FitGen、TinyDog、ROBOCON、Nemotron、AI Agent Security
+- 项目与成果：机器人竞赛、Kaggle 和模型优化相关成果
 
-## 🔬 Research Interests
-`AIGC` `Digital Human` `Diffusion Model` `Long-sequence Generation` `Multimodal` `Embodied AI` `Robot Perception` `SLAM`
+## 本地运行
 
-## 🚀 Featured Projects
-### 1. Music-Driven Long-Sequence Dance Generation for Digital Humans
-- Developed a semi-implicit diffusion model for high-fidelity music-to-motion synthesis
-- **Status**: SCI Journal Under Review
-- Tech Stack: PyTorch, Diffusion Model, Multimodal Fusion
+```bash
+npm ci
+npm run dev
+```
 
-### 2. Yoga Instructor Digital Humans System
-- Built a full-stack digital H、humans system with LLM, computer vision pose estimation, and multimodal interaction
-- Awarded **2nd Prize in DingJia Cup National College Student Competition**
-- Tech Stack: ROS2, OpenCV, YOLO, LLM, Python/C++
+构建检查：
 
-### 3. Emotional Companion Digital Human for Alzheimer's Patients
-- Designed a multimodal companion system for elderly care
-- Participated in **CCF Technical Public Welfare Marathon**
-- Tech Stack: TTS, Speech Recognition, Emotion Recognition, Unity
+```bash
+npm run build
+```
 
-### 4. ROBOCON 2025 Robot Basketball Competition
-- Developed LiDAR SLAM, visual perception, and motion control modules for autonomous robots
-- Won **3 National Third Prizes**
-- Tech Stack: ROS2, PointLIO, LiDAR, C++, Embedded System
+推送到 `main` 后，GitHub Actions 会自动构建并发布到 GitHub Pages。
 
-## 🛠️ Tech Stack & Skills
-### Programming Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+## 目录说明
 
-### AI & Deep Learning
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Diffusers](https://img.shields.io/badge/Diffusers-FF6F00?style=for-the-badge&logo=huggingface&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+- `src/scene/`：3D 场景、人物、相机和滚动交互
+- `src/ui/`：首屏、教育经历和项目成果内容
+- `src/data/`：教育节点、项目和 `focus-*` 对焦点配置
+- `public/models/me.glb`：当前使用的占位人物模型
 
-### Robotics & Engineering
-![ROS2](https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ros&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-### Tools & Others
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-
-
-
-## 📫 Contact Me
-- 📧 Email: 202330552511@mail.scut.edu.cn
-- 🧑‍💻 GitHub: https://github.com/bbd66/Brandon
-- 📝 Kaggle: https://www.kaggle.com/abdbrandon
-
----
-
-*"The best way to predict the future is to invent it."*
+当前人物模型仍是原型占位模型，后续可以替换为自己的 GLB，并保留 `focus-*` 节点和独立 `eye_L` / `eye_R` 网格以启用眼神跟随。
